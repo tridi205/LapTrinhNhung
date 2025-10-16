@@ -2,7 +2,7 @@ int led = 1;
 int btn_up = 2;
 int btn_down = 3;
 int time = 500;
-unsigned long pre_time = 0;
+unsigned long long pre_time = 0;
 int pre_btn_up = LOW;
 int pre_btn_down = LOW;
 void setup() {
@@ -12,7 +12,7 @@ void setup() {
 }
 
 void loop() {
-  unsigned long cur_time = millis();
+  unsigned long long cur_time = millis();
   int cur_btn_up = digitalRead(btn_up);
   int cur_btn_down = digitalRead(btn_down);
   if(cur_btn_up == LOW && pre_btn_up == HIGH)

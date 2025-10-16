@@ -1,7 +1,7 @@
 int list_led_red[2] = {0,3};
 int list_led_yellow[2] = {1,4};
 int list_led_green[2] = {2,5};
-unsigned long pre_time = 0;
+unsigned long long pre_time = 0;
 void setup() {
   for(int i = 0; i<2; i++)
   {
@@ -12,7 +12,7 @@ void setup() {
 }
 
 void loop() {
-  unsigned long cur_time = millis();
+  unsigned long long cur_time = millis();
   if(cur_time - pre_time <= 1000)
   {
     turnOffAllLed();
